@@ -4,15 +4,18 @@ Right now, the only input format implemented is "delimiter separator value" file
 
 To use the program use the following syntax:
 
-java -jar <input file> <input properties file> <output file>
+    java -jar <input file> <input properties file> <output file>
 
 For example, for a "Tab-separated values" file, create a input.properties file with the following content:
 
+```
 input.type=DelimitedInputReader
 DelimitedInputReader.encoding=UTF-8
 DelimitedInputReader.separator=\t
 input.fields=a,b,c,d,e,f
+```
 
 and use the next command supposing data.tsv file exists:
 
-java -jar data.tsv input.properties data.json
+    java -jar data.tsv input.properties data.json
+
